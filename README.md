@@ -55,6 +55,24 @@
 - Go over everything again and make sure its connected properly
 - Connect the powerplug to a wallsocket, please note, its a European powerplug so and extension might need to be used.
 
+## SETUP
+
+### Preperations for flashing code
+- Install the [arduino IDE](https://www.arduino.cc/en/software), please do not use the webeditor.
+- Use the follow [manual](https://learn.adafruit.com/16-channel-pwm-servo-driver/using-the-adafruit-library) to install the PWM servo driver library by adafruit.
+- Open `peristaltic_pump_controller/peristaltic_pump_controller.ino` in the arduino IDE.
+
+### Adjusting the timing
+- If the time the pumps run at full capacity needs to be adjusted, this can be done on line 11 of `peristaltic_pump_controller.ino`: `#define WAIT_PERIOD 25000`, 25000 can be replaced for any time in milliseconds.
+- If the time the pumps fade from one direction to another needs to be adjusted, this can be done on line 10 of `peristaltic_pump_controller.ino`: `#define FADE_PERIOD 3000`, 3000 can be replaced for any time in milliseconds.
+
+## USAGE
+
+### Turn on
+- If installed correctly, putting power on should immidiately start the pumps.
+- For easy powering down when closing the exhibition space we simply recommend using a powerbar with an on/off switch.
+
+
 
 
 
